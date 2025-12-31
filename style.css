@@ -10,3 +10,14 @@
     font-size:x-large;
 }
 
+#home_page_header {
+    color: brown;
+    background-image: url(/Users/samuelhaesungpark/ISEARCH2/assets/homer_header_image.jpg);
+    background-size: cover;    /* Scales image to fill container */
+    background-position: center; /* Keeps important parts centered */
+    background-repeat: no-repeat;
+    margin: 0px;
+    padding: 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+}
