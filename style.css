@@ -10,9 +10,8 @@
     font-size:x-large;
 }
 
-#home_page_header {
+.home_page_header {
     color: brown;
-    background-image: url(/Users/samuelhaesungpark/ISEARCH2/assets/homer_header_image.jpg);
     background-size: cover;    /* Scales image to fill container */
     background-position: center; /* Keeps important parts centered */
     background-repeat: no-repeat;
