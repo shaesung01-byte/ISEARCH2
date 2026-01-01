@@ -1,14 +1,46 @@
+html, body {
+    background-color: #f5efe6;
+
+}
+
+
 .nav {
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     display: flex;
-    gap: 20px;
+    width: 100%;
+    position: fixed;
+    
+
+
+}
+
+.nav li{
     background-color: black;
     color: white;
     cursor:grab;
     font-size:x-large;
+    text-align: center;
+    flex: 1;
 }
+
+.nav li:hover {
+    background-color: burlywood;
+}
+
+.current_page {
+    background-color: brown;
+}
+
+.nav li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+   
+    
+}
+
 
 .home_page_header {
     color: brown;
@@ -19,4 +51,17 @@
     padding: 0px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 20px;
+    background-image: url("/Users/samuelhaesungpark/ISEARCH2/assets/homer_header_image.jpg")
 }
+
+h2 {
+    text-align: center;
+    padding-top: 20px;
+    
+}
+
+.main_text {
+    padding: 0 50px;
+}
+
+
