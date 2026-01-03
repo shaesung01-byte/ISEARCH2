@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Effect of the Sand Creek Massacre(1864) and the Great Sioux War(1865-1867) on govm't policy-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="home_page_header">The Sand Creek Massacre and Great Sioux War on government policy</h1>
+    <img src="/Users/samuelhaesungpark/ISEARCH2/funny_meme.jpg" 
+     alt="Description of image" 
+     style="display:inline-block; width:100%; height:auto; vertical-align:middle;">
+
+    <ul class="nav" style="position: relative">
+        <li><a href="/Users/samuelhaesungpark/ISEARCH2/index.html">Home</a></li>
+        <li><a href="/Users/samuelhaesungpark/ISEARCH2/key_events.html">Key Events</a></li>
+        <li><a href="/Users/samuelhaesungpark/ISEARCH2/native_perspectives.html">Native Perspectives</a></li>
+        <li><a href="/Users/samuelhaesungpark/ISEARCH2/sources.html">Sources Cited</a></li>
+    </ul>
+    <div class="main_text">
+        <h2>Sources</h2>
+        <div class="sources">
+    <h2>Sources</h2>
+    <ul>
+        <li>National Park Service. <em>Sand Creek Massacre National Historic Site.</em> U.S. Department of the Interior. Accessed January 2026. <a href="https://www.nps.gov/sand" target="_blank">https://www.nps.gov/sand</a></li>
+        <li>National Park Service. <em>Red Cloud’s War (1866–1868).</em> U.S. Department of the Interior. Accessed January 2026. <a href="https://www.nps.gov" target="_blank">https://www.nps.gov</a></li>
+        <li>History.com Editors. “Sand Creek Massacre.” <em>History.</em> A&E Television Networks. Accessed January 2026. <a href="https://www.history.com/topics/native-american-history/sand-creek-massacre" target="_blank">https://www.history.com/topics/native-american-history/sand-creek-massacre</a></li>
+        <li>Encyclopaedia Britannica. “Great Sioux War.” Accessed January 2026. <a href="https://www.britannica.com" target="_blank">https://www.britannica.com</a></li>
+    </ul>
+</div>
+    </div>
+    <div class="mini-game">
+    <h2>Mini Game: Find the Impostor!</h2>
+    <p>Click the impostor (red crew member) before time runs out!</p>
+    <div id="game-area" style="width:300px; height:200px; border:1px solid #333; position:relative;">
+        <!-- Crew members -->
+        <div class="crew" style="width:30px; height:30px; background:blue; position:absolute; top:20px; left:20px; cursor:pointer;"></div>
+        <div class="crew" style="width:30px; height:30px; background:blue; position:absolute; top:100px; left:100px; cursor:pointer;"></div>
+        <div id="impostor" style="width:30px; height:30px; background:red; position:absolute; top:50px; left:200px; cursor:pointer;"></div>
+        <div class="crew" style="width:30px; height:30px; background:blue; position:absolute; top:150px; left:50px; cursor:pointer;"></div>
+    </div>
+    <p>Score: <span id="score">0</span></p>
+    <button id="start-btn">Start Game</button>
+</div>
+    <!--Game Section-->
+<script>
+let score = 0;
+let timeLeft = 10;
+let gameInterval;
+
+const impostor = document.getElementById('impostor');
+const scoreDisplay = document.getElementById('score');
+const startBtn = document.getElementById('start-btn');
+
+function moveImpostor() {
+    const gameArea = document.getElementById('game-area');
+    const maxX = gameArea.clientWidth - 30;
+    const maxY = gameArea.clientHeight - 30;
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
+    impostor.style.left = randomX + "px";
+    impostor.style.top = randomY + "px";
+}
+
+impostor.addEventListener('click', () => {
+    score++;
+    scoreDisplay.textContent = score;
+    moveImpostor();
+});
+
+startBtn.addEventListener('click', () => {
+    score = 0;
+    scoreDisplay.textContent = score;
+    timeLeft = 10;
+    moveImpostor();
+    if (gameInterval) clearInterval(gameInterval);
+    gameInterval = setInterval(() => {
+        timeLeft--;
+        if (timeLeft <= 0) {
+            clearInterval(gameInterval);
+            alert("Time's up! Your score: " + score);
+        }
+    }, 1000);
+});
+</script>
+
+
+</body>
+</html>

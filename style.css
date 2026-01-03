@@ -64,4 +64,34 @@ h2 {
     padding: 0 50px;
 }
 
+/* Simple Sources Styling Without Changing Font */
+.sources {
+    padding: 10px 15px;
+    margin: 20px 0;
+    background-color: #f0f0f0; /* light gray background */
+    line-height: 1.5;
+}
+
+.sources h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.sources ul {
+    padding-left: 20px;
+}
+
+.sources ul li {
+    margin-bottom: 5px;
+}
+
+.sources a {
+    color: blue;
+    text-decoration: none;
+}
+
+.sources a:hover {
+    text-decoration: underline;
+}
+
 
