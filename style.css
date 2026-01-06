@@ -51,7 +51,7 @@ html, body {
     padding: 0px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     padding: 20px;
-    background-image: url("/assets/homer_header_image.jpg")
+    background-image: url("assets/homer_header_image.jpg")
 }
 
 h2 {
